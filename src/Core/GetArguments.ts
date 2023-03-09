@@ -1,14 +1,11 @@
-import { GetArgumentT } from '../Types/ArgsType';
-module.exports = (): GetArgumentT => {
-  return {
-    '--help--': {
-      Flag: ['--help', '-?'],
-      Description: 'Looking For Options',
-    },
+export interface IGetArguments {
+  ['--Help--']: Array<'--help' | '-?'>;
+  ['--Generate-To-Jsx--']: Array<'--generate-to-jsx' | '-Gx'>;
+}
 
-    '--generate-to-jsx--': {
-      Flag: ['--generate-to-jsx', '-Gx'],
-      Description: '',
-    },
+module.exports = (): IGetArguments => {
+  return {
+    '--Help--': ['--help', '-?'],
+    '--Generate-To-Jsx--': ['--generate-to-jsx', '-Gx'],
   };
 };
