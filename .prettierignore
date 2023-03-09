@@ -1,0 +1,10 @@
+build/
+dist/
+node_modules/
+.next/
+/crates/turbopack-tests/tests/snapshot/**/output/
+
+crates/next-core/js/src/compiled
+crates/turbopack/bench.json
+
+crates/turbopack/tests/node-file-trace/integration/ts-package/tsconfig.json
